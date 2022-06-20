@@ -118,9 +118,7 @@
             <version>${emrapiVersion}</version>
             <scope>provided</scope>
         </dependency>
-
-
-        <!-- OpenMRS modules simply required to fire up the application context when running component tests -->
+       <!-- OpenMRS modules simply required to fire up the application context when running component tests -->
 
         <dependency>
             <groupId>org.openmrs.module</groupId>
