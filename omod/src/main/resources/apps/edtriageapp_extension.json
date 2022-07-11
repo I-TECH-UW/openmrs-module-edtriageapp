@@ -1,11 +1,15 @@
 [
-    {
-        "id": "edtriageapp.app",
-        "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+ {
+        "id": "edtriageapp.edTriageNote",
+        "extensionPointId": "patientDashboard.overallActions",
         "type": "link",
-        "label": "ED Triage",
-        "url": "edtriageapp/findPatient?appId=edtriageapp.app",
-        "icon": "icon-desktop",
-        "order": 201
+        "label": "ED Triage Note ",
+        "url": "edtriageapp/edtriageEditPatient.page?patientId={{patient.uuid}}&appId=edtriageapp.app.edTriage",
+        "icon": "fas fa-fw fa-ambulance",
+        "order": 205,
+        "requiredPrivilege":null,
+        "featureToggle":null ,
+        "script":null,
+        "extensionParams":null
     }
 ]

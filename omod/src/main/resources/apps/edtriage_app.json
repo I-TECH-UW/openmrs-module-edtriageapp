@@ -1,24 +1,26 @@
 [
-  {
-        "id": "edtriageapp.app.edTriage",
-        "instanceOf": "coreapps.template.findPatient",
-        "description": "Search for a study participant and take user to the Edit Contacts page",
+    {
+        "id": "edtriageapp.app.triageQueue",
+        "url": "edtriageapp/edtriageViewQueue.page?appId=edtriageapp.app.triageQueue",
+        "description": "ED Triage Queue",
         "order": 20,
+        "requiredPrivilege" : null ,
+        "icon" : "fas fa-fw fa-list-ol",
         "config": {
-            "label": "ED Triage",
-            "afterSelectedUrl":"/edtriageapp/edtriageEditPatient.page?patientId={{ patientId }}",
-            "heading": "ED Triage"
+            "dashboardUrl": "coreapps/clinicianfacing/patient.page?patientId={{patientId}}"
         },
         "extensions": [
             {
-                "id": "edtriageapp.app.edTriage.findPatientAndAddtoTriageHomepageLink",
+                "id": "edtriageapp.app.triageQueue.appLink",
+                "appId": "edtriageapp.app.triageQueue",
                 "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
                 "type": "link",
-                "label": "ED Triage",
-                "url": "coreapps/findpatient/findPatient.page?app=edtriageapp.app.edTriage",
-                "icon": "fas fa-fw fa-ambulance",
-                "requiredPrivilege": "App: coreapps.findPatient"
+                "label": "ED Triage Queue",
+                "url": "edtriageapp/edtriageViewQueue.page?appId=edtriageapp.app.triageQueue",
+                "icon": "as fa-fw fa-list-ol",
+                "requiredPrivilege": null ,
+                "require" : null
             }
         ]
-    }  
+    } 
 ]
