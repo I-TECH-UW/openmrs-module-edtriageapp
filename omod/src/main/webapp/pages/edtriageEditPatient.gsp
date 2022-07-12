@@ -41,7 +41,7 @@
 <script type="text/javascript" xmlns="http://www.w3.org/1999/html">
 	var breadcrumbs = [
 		{ icon: "icon-home", link: '/' + OPENMRS_CONTEXT_PATH + '/index.htm' },
-		{ label: "${ ui.escapeJs(endLabel) }" , link: '${ui.pageLink("coreapps", "patientdashboard/patientDashboard", [patientId: patient.id])}'},
+		{ label: "${ ui.escapeJs(endLabel) }" , link: '${ui.pageLink("coreapps", "", [patientId: patient.id])}'},
 	];
 
 	function sticky_relocate() {
@@ -531,7 +531,6 @@ ${ ui.includeFragment("edtriageapp", "translations") }
 <script type="text/javascript">
 	angular.module('edTriageApp')
 			.value('patientUuid', '${ patient.uuid }')
-			.value('patientDashboard', '${ dashboardUrl }')
 			.value('patientBirthDate', '${ patient.birthdate }')
 			.value('patientGender', '${ patient.gender }')
 			.value('locationUuid', '${ location.uuid }')
