@@ -7,7 +7,7 @@
         "requiredPrivilege" : null ,
         "icon" : "fas fa-fw fa-list-ol",
         "config": {
-            "dashboardUrl": "coreapps/clinicianfacing/patient.page?patientId={{patientId}}"
+            "dashboardUrl": "coreapps/clinicianfacing/patient.page?patientId={{patient.patientId}}"
         },
         "extensions": [
             {
@@ -17,7 +17,7 @@
                 "type": "link",
                 "label": "ED Triage Queue",
                 "url": "edtriageapp/edtriageViewQueue.page?appId=edtriageapp.app.triageQueue",
-                "icon": "as fa-fw fa-list-ol",
+                "icon": "fas fa-fw fa-list-ol",
                 "requiredPrivilege": null ,
                 "require" : null
             }

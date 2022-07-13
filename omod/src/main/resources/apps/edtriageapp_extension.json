@@ -1,11 +1,11 @@
 [
  {
-        "id": "edtriageapp.edTriageNote",
+        "id": "edtriageapp.app.edTriage",
         "extensionPointId": "patientDashboard.overallActions",
         "type": "link",
-        "label": "ED Triage Note ",
-        "url": "edtriageapp/edtriageEditPatient.page?patientId={{patient.uuid}}&appId=edtriageapp.app.edTriage",
-        "icon": "fas fa-fw fa-ambulance",
+        "label":"ED Triage Note",
+        "url":  "edtriageapp/edtriageEditPatient.page?patientId={{patient.patientId}}",
+        "icon": "fas fa-fw fa-ambulance ",
         "order": 205,
         "requiredPrivilege":null,
         "featureToggle":null ,

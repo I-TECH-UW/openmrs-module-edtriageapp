@@ -31,8 +31,7 @@
 	ui.includeJavascript("edtriageapp", "app.js")
 
 	def middleLabel = returnLabel ?:  ui.message("edtriageapp.label")
-	def middleUrl   = returnUrl ?:  ui.pageLink("coreapps", "findpatient/findPatient?app=" + appId)
-	middleUrl = middleUrl + "&dashboardUrl=" + dashboardUrl
+	
 	def endLabel = ui.format(patient.familyName + ", " + patient.givenName)
 	endLabel = (middleLabel == endLabel) ? ui.message("edtriageapp.label") : endLabel
 
@@ -42,8 +41,7 @@
 <script type="text/javascript" xmlns="http://www.w3.org/1999/html">
 	var breadcrumbs = [
 		{ icon: "icon-home", link: '/' + OPENMRS_CONTEXT_PATH + '/index.htm' },
-		{ label: "${ middleLabel }", link: "${ middleUrl }" },
-		{ label: "${ ui.escapeJs(endLabel) }" , link: '${ui.pageLink("coreapps", "patientdashboard/patientDashboard", [patientId: patient.id])}'},
+		{ label: "${ ui.escapeJs(endLabel) }" , link: '${ui.pageLink("coreapps", "", [patientId: patient.id])}'},
 	];
 
 	function sticky_relocate() {
@@ -533,7 +531,6 @@ ${ ui.includeFragment("edtriageapp", "translations") }
 <script type="text/javascript">
 	angular.module('edTriageApp')
 			.value('patientUuid', '${ patient.uuid }')
-			.value('patientDashboard', '${ dashboardUrl }')
 			.value('patientBirthDate', '${ patient.birthdate }')
 			.value('patientGender', '${ patient.gender }')
 			.value('locationUuid', '${ location.uuid }')

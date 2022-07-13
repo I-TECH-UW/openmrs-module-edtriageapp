@@ -46,6 +46,9 @@ public class EdtriageEditPatientPageController {
 
         model.addAttribute("encounter", encounter);
         model.addAttribute("editable", editable != null ? editable : true);
+        
+        
+        /*
 
         AppDescriptor app = app = appFrameworkService.getApp(EDTriageConstants.ED_TRIAGE);
         String patientDashboard = null;
@@ -61,6 +64,8 @@ public class EdtriageEditPatientPageController {
             Iterator<JsonNode> elements = afterSelectedUrl.getElements();
         }
         model.addAttribute("dashboardUrl", patientDashboard);
+        
+        */
 
         return null;
 
