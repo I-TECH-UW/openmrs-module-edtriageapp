@@ -44,7 +44,7 @@ angular.module("edTriageConceptFactory", [])
                     }
                 }),
                 lowGlucoseLevel: toAnswers('lowGlucoseLevel',
-                    [toAnswer("3cd6f600-26fe-102b-80cb-0017a47871b2", "lowGlucoseLevel", function(ageType, value) {
+                    [toAnswer("1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lowGlucoseLevel", function(ageType, value) {
                         if (value.length > 0) {
                             return {numericScore: 0, colorCode: EdTriageConcept.score.red};
                         } else {
@@ -53,7 +53,7 @@ angular.module("edTriageConceptFactory", [])
                     })],
                     "ff55a386-e25d-461d-994f-f43e219b94f1"),
                 highGlucoseLevel: toAnswers('highGlucoseLevel',
-                    [ toAnswer("3cd6f600-26fe-102b-80cb-0017a47871b2","highGlucoseLevel", function(ageType, value) {
+                    [ toAnswer("1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","highGlucoseLevel", function(ageType, value) {
                         if (value.length > 0) {
                             if(ageType == EdTriageConcept.ageType.CHILD || ageType == EdTriageConcept.ageType.ADULT){
                                 return {numericScore: 0, colorCode: EdTriageConcept.score.orange};
@@ -332,11 +332,11 @@ angular.module("edTriageConceptFactory", [])
         EdTriageConcept.numericScore = "f6ee497c-1db0-4c58-a55c-d65175a91fb9";
 
         EdTriageConcept.lowGlucoseLevel = {
-            yes: "3cd6f600-26fe-102b-80cb-0017a47871b2"
+            yes: "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
         };
 
         EdTriageConcept.highGlucoseLevel = {
-            yes: "3cd6f600-26fe-102b-80cb-0017a47871b2"
+            yes: "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
         };
 
         EdTriageConcept.ageType = {
