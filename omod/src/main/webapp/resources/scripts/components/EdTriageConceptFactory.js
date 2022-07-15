@@ -320,9 +320,9 @@ angular.module("edTriageConceptFactory", [])
 
         EdTriageConcept.status = {
             waitingForEvaluation: "4dd3244d-fcb9-424d-ad8a-afd773c69923",
-            outpatientConsultation: "3cdc871e-26fe-102b-80cb-0017a47871b2",
+            outpatientConsultation: "160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
             leftWithoutBeingSeen: "dd050085-ef34-4318-9423-c4ed666ac372",
-            removed: "45d0c3d2-2188-4186-8a19-0063b92914ee",
+            removed: "8d1825cb-8e46-446c-9365-a87fd815a5e7",
             expired: "1fa8d25e-7471-4201-815f-79fac44d9a5f"
         };
 
