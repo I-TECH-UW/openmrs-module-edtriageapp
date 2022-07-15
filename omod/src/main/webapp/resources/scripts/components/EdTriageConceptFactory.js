@@ -51,7 +51,7 @@ angular.module("edTriageConceptFactory", [])
                             return {numericScore: 0, colorCode: EdTriageConcept.score.green};
                         }
                     })],
-                    "ff55a386-e25d-461d-994f-f43e219b94f1"),
+                    "d6b53c01-ef95-412f-a7dd-287e6d94aa1e"),
                 highGlucoseLevel: toAnswers('highGlucoseLevel',
                     [ toAnswer("1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","highGlucoseLevel", function(ageType, value) {
                         if (value.length > 0) {
@@ -61,7 +61,7 @@ angular.module("edTriageConceptFactory", [])
                         }
                         return {numericScore: 0, colorCode: EdTriageConcept.score.green};
                     }) ],
-                    "05819e23-100e-41da-ae7b-cfc401ca7146"),
+                    "d27cee7f-a4ad-4552-a1e0-7873d79de178"),
                 pregnancy_test: toAnswers('pregnancy_test',
                     [toAnswer("3cd3a7a2-26fe-102b-80cb-0017a47871b2","positive", {numericScore: 0}, 'A'),
                      toAnswer("3cd28732-26fe-102b-80cb-0017a47871b2","negative", {numericScore: 0}, 'A')],
