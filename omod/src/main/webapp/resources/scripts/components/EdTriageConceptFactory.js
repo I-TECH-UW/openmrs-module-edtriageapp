@@ -4,7 +4,7 @@ angular.module("edTriageConceptFactory", [])
          * Constructor, with class name
          */
         function EdTriageConcept() {
-            var GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID = "	30af5fb6-baed-4b94-9b3d-576f38ac8544";
+            var GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID = "30af5fb6-baed-4b94-9b3d-576f38ac8544";
             // Public properties, assigned to the instance ('this')
             this.triageQueueStatus =  toAnswers("triageQueueStatus", [
                     toAnswer(EdTriageConcept.status.waitingForEvaluation, "waitingForEvaluation"),
@@ -190,7 +190,7 @@ angular.module("edTriageConceptFactory", [])
                         toAnswer("162644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "responds to pain", { numericScore: 2, colorCode: EdTriageConcept.score.green }, null, 4),
                         toAnswer("159508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "unresponsive",  { numericScore: 3, colorCode: EdTriageConcept.score.green }, null, 5)],
                     GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
-                trauma: toAnswers('trauma', [toAnswer("	124193AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "trauma", function(ageType, value){
+                trauma: toAnswers('trauma', [toAnswer("124193AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "trauma", function(ageType, value){
                     return value.length > 0 ?  { numericScore: 1, colorCode: EdTriageConcept.score.green } :  { numericScore: 0, colorCode: EdTriageConcept.score.green };})],
                     GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 weight: toAnswer("5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "weight", function(ageType, value){
@@ -311,7 +311,7 @@ angular.module("edTriageConceptFactory", [])
         
         //some static vars for the scores for symptoms
         EdTriageConcept.score = {
-            blue: "	f4d69199-00b3-449d-ad90-b82aa306002f",
+            blue: "f4d69199-00b3-449d-ad90-b82aa306002f",
             red: "7e5f97c9-2eaa-476d-afa6-6017095964d6",
             orange: "4563ae8e-c007-4fb6-a215-eb1118737c59",
             yellow: "c3b7e63a-a478-40ca-8fe6-0bbcce1746c9",
