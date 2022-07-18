@@ -18,7 +18,7 @@ angular.module("edTriageConceptFactory", [])
                     toAnswer(EdTriageConcept.score.green, "green"),
                     toAnswer(EdTriageConcept.score.yellow, "yellow"),
                     toAnswer(EdTriageConcept.score.orange, "orange")]
-                , "f81631c8-f658-4472-a7eb-c618b05e6149");
+                , "1d1ab94d-9242-467a-bb69-774cb7abcde4");
             this.triageScore = toAnswer("e1445950-2633-4012-9f39-1446361d1773", "score");
             this.triageWaitingTime = toAnswer("0a84ea93-e057-4643-abe6-dca97426da8d", "triageWaitingTime");
             this.chiefComplaint = toAnswer("160531AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "chiefComplaint");
@@ -311,11 +311,11 @@ angular.module("edTriageConceptFactory", [])
         
         //some static vars for the scores for symptoms
         EdTriageConcept.score = {
-            blue: "ea658b2b-9c97-438b-a2c9-5dfcc9a24b73",
-            red: "762ecf40-3065-47aa-93c3-15372d98d393",
-            orange: "95d75a4a-cb14-4f1f-b7d5-f53e694b403f",
-            yellow: "70763694-61c5-447f-abc3-91f144bfcc0b",
-            green: "1d549146-e477-4dcc-9716-11fe4d1cad68"
+            blue: "	f4d69199-00b3-449d-ad90-b82aa306002f",
+            red: "7e5f97c9-2eaa-476d-afa6-6017095964d6",
+            orange: "4563ae8e-c007-4fb6-a215-eb1118737c59",
+            yellow: "c3b7e63a-a478-40ca-8fe6-0bbcce1746c9",
+            green: "88bae566-8147-456a-9021-ee41c66ac22f"
         };
 
         EdTriageConcept.status = {
