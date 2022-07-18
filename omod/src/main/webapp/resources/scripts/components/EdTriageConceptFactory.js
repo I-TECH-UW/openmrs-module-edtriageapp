@@ -247,20 +247,20 @@ angular.module("edTriageConceptFactory", [])
                     toAnswer("117617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "pregnancy & trauma or vaginal bleeding",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 2 )]
                     ,GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 respiratory: toAnswers('respiratory',[
-                    toAnswer("f7ef0b85-6af3-43b9-87a5-5abf89e3a3f5", "hypersalivation",  { numericScore: 0, colorCode: EdTriageConcept.score.red }, 'CI', 1),
-                    toAnswer("24fa118d-f81d-439d-82a5-d7c6ac6ef72b", "stridor",  function(ageType, value) {
+                    toAnswer("118478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "hypersalivation",  { numericScore: 0, colorCode: EdTriageConcept.score.red }, 'CI', 1),
+                    toAnswer("136119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "stridor",  function(ageType, value) {
                         if (ageType == EdTriageConcept.ageType.INFANT) {
                             return { numericScore: 0, colorCode: EdTriageConcept.score.red };
                         } else if (ageType == EdTriageConcept.ageType.CHILD) {
                             return { numericScore: 0, colorCode: EdTriageConcept.score.orange };
                         }
                     }, 'I', 2),
-                    toAnswer("3cf1a95a-26fe-102b-80cb-0017a47871b2", "dyspnea-shortness of breath",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'I', 3),
-                    toAnswer("3cf1a95a-26fe-102b-80cb-0017a47871b2", "dyspnea-shortness of breath",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'C', 4),
-                    toAnswer("24fa118d-f81d-439d-82a5-d7c6ac6ef72b", "stridor",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'C', 5),
-                    toAnswer("3ceade68-26fe-102b-80cb-0017a47871b2", "sibilance",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'CI', 6),
-                    toAnswer("12d9f052-6980-4542-91ef-190247811228", "shortness of breath - acute",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, EdTriageConcept.ageType.ADULT, 7),
-                    toAnswer("4c1c143e-c1b3-4225-8053-93ab22f7bbb3", "coughing blood ",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, EdTriageConcept.ageType.ADULT, 8)
+                    toAnswer("122496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "dyspnea-shortness of breath",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'I', 3),
+                    toAnswer("122496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "dyspnea-shortness of breath",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'C', 4),
+                    toAnswer("136119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "stridor",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'C', 5),
+                    toAnswer("5209AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "sibilance",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'CI', 6),
+                    toAnswer("163485AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "shortness of breath - acute",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, EdTriageConcept.ageType.ADULT, 7),
+                    toAnswer("ca679c78-e05f-4d08-8baf-be0659f09c02", "coughing blood ",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, EdTriageConcept.ageType.ADULT, 8)
                     ]
                     ,GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 pain: toAnswers('pain',[
