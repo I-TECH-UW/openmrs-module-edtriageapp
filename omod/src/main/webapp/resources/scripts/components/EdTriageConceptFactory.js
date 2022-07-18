@@ -12,14 +12,14 @@ angular.module("edTriageConceptFactory", [])
                     toAnswer(EdTriageConcept.status.leftWithoutBeingSeen, "leftWithoutBeingSeen"),
                     toAnswer(EdTriageConcept.status.removed, "remove"),
                     toAnswer(EdTriageConcept.status.expired, "expire")]
-                , "66c18ba5-459e-4049-94ab-f80aca5c6a98");
+                , "9dbc0bfa-193e-4fc4-a1e3-3b1475ff305d");
             this.triageColorCode =  toAnswers("triageColorCode", [
                     toAnswer(EdTriageConcept.score.red, "red"),
                     toAnswer(EdTriageConcept.score.green, "green"),
                     toAnswer(EdTriageConcept.score.yellow, "yellow"),
                     toAnswer(EdTriageConcept.score.orange, "orange")]
                 , "f81631c8-f658-4472-a7eb-c618b05e6149");
-            this.triageScore = toAnswer("f6ee497c-1db0-4c58-a55c-d65175a91fb9", "score");
+            this.triageScore = toAnswer("e1445950-2633-4012-9f39-1446361d1773", "score");
             this.triageWaitingTime = toAnswer("0a84ea93-e057-4643-abe6-dca97426da8d", "triageWaitingTime");
             this.chiefComplaint = toAnswer("160531AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "chiefComplaint");
             this.clinicalImpression = toAnswer("159395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "clinicalImpression");
@@ -319,17 +319,17 @@ angular.module("edTriageConceptFactory", [])
         };
 
         EdTriageConcept.status = {
-            waitingForEvaluation: "4dd3244d-fcb9-424d-ad8a-afd773c69923",
+            waitingForEvaluation: "90b571f3-5a4e-4634-903b-e322888c469a",
             outpatientConsultation: "160542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-            leftWithoutBeingSeen: "dd050085-ef34-4318-9423-c4ed666ac372",
+            leftWithoutBeingSeen: "3bf7cce1-45fc-4939-96f5-f9e0d3e42e9a",
             removed: "8d1825cb-8e46-446c-9365-a87fd815a5e7",
-            expired: "1fa8d25e-7471-4201-815f-79fac44d9a5f"
+            expired: "99928547-6b1e-4ccf-9a43-2c71c527f8eb"
         };
 
         EdTriageConcept.heartRate = "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         EdTriageConcept.respiratoryRate = "5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         EdTriageConcept.oxygenSaturation = "5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-        EdTriageConcept.numericScore = "f6ee497c-1db0-4c58-a55c-d65175a91fb9";
+        EdTriageConcept.numericScore = "e1445950-2633-4012-9f39-1446361d1773";
 
         EdTriageConcept.lowGlucoseLevel = {
             yes: "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
