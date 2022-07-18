@@ -85,7 +85,7 @@ angular.module("edTriageConceptFactory", [])
                         toAnswer("3cd65f7e-26fe-102b-80cb-0017a47871b2", "walking", { numericScore: 0, colorCode: EdTriageConcept.score.green } , 'AC', 1),
                         toAnswer("3cd750a0-26fe-102b-80cb-0017a47871b2", "normal for age", { numericScore: 0, colorCode: EdTriageConcept.score.green } , EdTriageConcept.ageType.INFANT, 3)]
                     , "611e7b0a-5b34-47ac-b352-02c2dc653255"),
-                respiratoryRate: toAnswer("3ceb11f8-26fe-102b-80cb-0017a47871b2", "respiratoryRate", function(ageType, value){
+                respiratoryRate: toAnswer("5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "respiratoryRate", function(ageType, value){
                     if (!isNumber(value)) {
                         return { numericScore: 0, colorCode: EdTriageConcept.score.green };
                     }
@@ -327,7 +327,7 @@ angular.module("edTriageConceptFactory", [])
         };
 
         EdTriageConcept.heartRate = "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-        EdTriageConcept.respiratoryRate = "3ceb11f8-26fe-102b-80cb-0017a47871b2";
+        EdTriageConcept.respiratoryRate = "5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         EdTriageConcept.oxygenSaturation = "5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         EdTriageConcept.numericScore = "f6ee497c-1db0-4c58-a55c-d65175a91fb9";
 
