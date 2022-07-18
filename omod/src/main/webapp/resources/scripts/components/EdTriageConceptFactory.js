@@ -183,12 +183,12 @@ angular.module("edTriageConceptFactory", [])
                     }
                     return { numericScore: 2, colorCode: EdTriageConcept.score.green };
                 }),
-                consciousness: toAnswers(        'consciousness',
-                    [toAnswer("3cf27e66-26fe-102b-80cb-0017a47871b2", "confusion", { numericScore: 2, colorCode: EdTriageConcept.score.green }, 'AC', 1),
+                consciousness: toAnswers('consciousness',
+                    [toAnswer("120345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "confusion", { numericScore: 2, colorCode: EdTriageConcept.score.green }, 'AC', 1),
                         toAnswer("160282AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "alert",  { numericScore: 0, colorCode: EdTriageConcept.score.green }, null, 2),
                         toAnswer("162645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "reacts to voice", { numericScore: 1, colorCode: EdTriageConcept.score.green }, null, 3),
                         toAnswer("162644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "responds to pain", { numericScore: 2, colorCode: EdTriageConcept.score.green }, null, 4),
-                        toAnswer("f7a1fd17-f12d-48c1-b3dd-8e9fc95c8100", "unresponsive",  { numericScore: 3, colorCode: EdTriageConcept.score.green }, null, 5)],
+                        toAnswer("159508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "unresponsive",  { numericScore: 3, colorCode: EdTriageConcept.score.green }, null, 5)],
                     GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 trauma: toAnswers('trauma', [toAnswer("	124193AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "trauma", function(ageType, value){
                     return value.length > 0 ?  { numericScore: 1, colorCode: EdTriageConcept.score.green } :  { numericScore: 0, colorCode: EdTriageConcept.score.green };})],
@@ -202,8 +202,8 @@ angular.module("edTriageConceptFactory", [])
             this.symptoms = {
                 emergencySigns: toAnswers('emergencySigns',[
                         toAnswer("164348AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "impaired airway",  { numericScore: 0, colorCode: EdTriageConcept.score.red }, null, 1),
-                        toAnswer("3cedf31e-26fe-102b-80cb-0017a47871b2", "impaired breathing",  { numericScore: 0, colorCode: EdTriageConcept.score.red }, null, 2),
-                        toAnswer("911c064e-5247-4017-a9fd-b30105c36052", "shock",  { numericScore: 0, colorCode: EdTriageConcept.score.red }, null, 3),]
+                        toAnswer("142373AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "impaired breathing",  { numericScore: 0, colorCode: EdTriageConcept.score.red }, null, 2),
+                        toAnswer("112989AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "shock",  { numericScore: 0, colorCode: EdTriageConcept.score.red }, null, 3),]
                     ,GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 neurological: toAnswers('neurological',[
                     toAnswer("113054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "seizure - convulsive",  { numericScore: 0, colorCode: EdTriageConcept.score.red }, null, 1),
@@ -264,16 +264,16 @@ angular.module("edTriageConceptFactory", [])
                     ]
                     ,GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 pain: toAnswers('pain',[
-                    toAnswer("d092c376-5f89-4abd-a6ec-8632587b797b", "severe pain",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 1),
-                    toAnswer("10008d98-6653-47fb-b171-02e0f257e875", "moderate pain",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 3),
-                    toAnswer("3ccd2364-26fe-102b-80cb-0017a47871b2", "chest pain",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, EdTriageConcept.ageType.ADULT, 2),
-                    toAnswer("3ccdf8d4-26fe-102b-80cb-0017a47871b2", "abdominal pain",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 4)
+                    toAnswer("163477AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "severe pain",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 1),
+                    toAnswer("163478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "moderate pain",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 3),
+                    toAnswer("120749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "chest pain",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, EdTriageConcept.ageType.ADULT, 2),
+                    toAnswer("151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "abdominal pain",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 4)
                     ]
                     ,GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 other: toAnswers('other',[
-                    toAnswer("3ccccc20-26fe-102b-80cb-0017a47871b2", "toxicity-Poisoning/overdose",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 1),
-                    toAnswer("15bd52f1-a35b-489d-a283-ece958c4ef1e", "purpura",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'CI', 2),
-                    toAnswer("8084b7b2-adc4-4b83-aafc-647d1308c988", "drowsiness",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, EdTriageConcept.ageType.CHILD, 3),
+                    toAnswer("83AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "toxicity-Poisoning/overdose",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 1),
+                    toAnswer("113478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "purpura",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'CI', 2),
+                    toAnswer("141762AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "drowsiness",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, EdTriageConcept.ageType.CHILD, 3),
                     toAnswer("137646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "incoherent story (or history)",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, 'CI', 4),
                     toAnswer("148566AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "anuria",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, EdTriageConcept.ageType.INFANT, 5)]
                     ,GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID)
