@@ -238,9 +238,9 @@ angular.module("edTriageConceptFactory", [])
                     toAnswer("139006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "vomiting - fresh blood",  { numericScore: 0, colorCode: EdTriageConcept.score.orange}, EdTriageConcept.ageType.ADULT, 1),
                     toAnswer("130334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "vomiting - persistent",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, EdTriageConcept.ageType.ADULT, 2),
                     toAnswer("139582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Gastrointestinal hemorrhage",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, 'CI', 3),
-                    toAnswer("2d70f8ca-f3dd-4988-8107-9f6b2beb5ff1", "refuses to feed/drink",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, EdTriageConcept.ageType.INFANT, 6),
-                    toAnswer("3cf1c930-26fe-102b-80cb-0017a47871b2", "Vomiting", { numericScore: 0, colorCode: EdTriageConcept.score.yellow },'CI', 4),
-                    toAnswer("4522ea3d-6045-43d8-a97c-33117191da87", "Persistent diarrhea", { numericScore: 0, colorCode: EdTriageConcept.score.yellow },'CI', 5)]
+                    toAnswer("163484AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "refuses to feed/drink",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, EdTriageConcept.ageType.INFANT, 6),
+                    toAnswer("122983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Vomiting", { numericScore: 0, colorCode: EdTriageConcept.score.yellow },'CI', 4),
+                    toAnswer("0948f776-1917-4608-a2e4-ee31a1a2764d", "Persistent diarrhea", { numericScore: 0, colorCode: EdTriageConcept.score.yellow },'CI', 5)]
                     ,GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 pregnancy: toAnswers('pregnancy',[
                     toAnswer("153551AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "pregnancy & abdominal trauma or pain",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 1),
