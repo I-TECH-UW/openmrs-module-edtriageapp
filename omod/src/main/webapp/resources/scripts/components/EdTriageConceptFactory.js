@@ -80,11 +80,11 @@ angular.module("edTriageConceptFactory", [])
 
             this.vitals = {
                 mobility: toAnswers('mobility',
-                    [toAnswer("38b69221-d8c5-41ca-81fb-258469bdf519", "immobile", { numericScore: 2, colorCode: EdTriageConcept.score.green}, null, 4),
-                        toAnswer("d335ec09-c724-4327-9726-f3c984bb1ca1", "with help", { numericScore: 1, colorCode: EdTriageConcept.score.green }, 'AC', 2),
-                        toAnswer("3cd65f7e-26fe-102b-80cb-0017a47871b2", "walking", { numericScore: 0, colorCode: EdTriageConcept.score.green } , 'AC', 1),
-                        toAnswer("3cd750a0-26fe-102b-80cb-0017a47871b2", "normal for age", { numericScore: 0, colorCode: EdTriageConcept.score.green } , EdTriageConcept.ageType.INFANT, 3)]
-                    , "611e7b0a-5b34-47ac-b352-02c2dc653255"),
+                    [toAnswer("59c854da-b1be-4455-9ec2-8fa838c193d1", "immobile", { numericScore: 2, colorCode: EdTriageConcept.score.green}, null, 4),
+                        toAnswer("2f9fcdbc-413c-47da-881d-6ecd0984876f", "with help", { numericScore: 1, colorCode: EdTriageConcept.score.green }, 'AC', 2),
+                        toAnswer("159310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "walking", { numericScore: 0, colorCode: EdTriageConcept.score.green } , 'AC', 1),
+                        toAnswer("1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "normal for age", { numericScore: 0, colorCode: EdTriageConcept.score.green } , EdTriageConcept.ageType.INFANT, 3)]
+                    , "c50be7a4-410b-4514-baf8-35358b5860c3"),
                 respiratoryRate: toAnswer("5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "respiratoryRate", function(ageType, value){
                     if (!isNumber(value)) {
                         return { numericScore: 0, colorCode: EdTriageConcept.score.green };
