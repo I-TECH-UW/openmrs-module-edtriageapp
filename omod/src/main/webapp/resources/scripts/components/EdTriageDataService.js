@@ -15,8 +15,8 @@ angular.module("edTriageDataService", [])
                     ACTIVE_VISIT: "/" + OPENMRS_CONTEXT_PATH  + "/ws/rest/emrapi/activevisit"
                 },
                 ED_TRIAGE_CONCEPT_UUIDS: ["123fa843-a734-40c9-910c-4fe7527427ef"] ,
-                ED_TRIAGE_ENCOUNTER_TYPE: "74cef0a6-2801-11e6-b67b-9e71128cae77",
-                CONSULTING_CLINICIAN_ENCOUNTER_ROLE: "4f10ad1a-ec49-48df-98c7-1391c6ac7f05"
+                ED_TRIAGE_ENCOUNTER_TYPE: "1ca35231-14d6-45c1-b380-14a4d02115eb",
+                CONSULTING_CLINICIAN_ENCOUNTER_ROLE: "240b26f9-dd88-4172-823d-4a8bfeb7841f"
             };
 
             /* load a the concept definition for a ed triage patient
