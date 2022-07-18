@@ -124,7 +124,7 @@ angular.module("edTriageConceptFactory", [])
                         return { numericScore: 0, colorCode: EdTriageConcept.score.green };
                     }
                 }),
-                heartRate: toAnswer("3ce93824-26fe-102b-80cb-0017a47871b2", "heartRate", function(ageType, value){
+                heartRate: toAnswer("5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "heartRate", function(ageType, value){
                     if (!isNumber(value)) {
                         return { numericScore: 0, colorCode: EdTriageConcept.score.green };
                     }
@@ -326,7 +326,7 @@ angular.module("edTriageConceptFactory", [])
             expired: "1fa8d25e-7471-4201-815f-79fac44d9a5f"
         };
 
-        EdTriageConcept.heartRate = "3ce93824-26fe-102b-80cb-0017a47871b2";
+        EdTriageConcept.heartRate = "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         EdTriageConcept.respiratoryRate = "3ceb11f8-26fe-102b-80cb-0017a47871b2";
         EdTriageConcept.oxygenSaturation = "5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         EdTriageConcept.numericScore = "f6ee497c-1db0-4c58-a55c-d65175a91fb9";
