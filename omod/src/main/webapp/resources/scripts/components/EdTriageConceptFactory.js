@@ -4,7 +4,7 @@ angular.module("edTriageConceptFactory", [])
          * Constructor, with class name
          */
         function EdTriageConcept() {
-            var GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID = "060f63dd-9588-4dc2-bf19-c90da02bff15";
+            var GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID = "	30af5fb6-baed-4b94-9b3d-576f38ac8544";
             // Public properties, assigned to the instance ('this')
             this.triageQueueStatus =  toAnswers("triageQueueStatus", [
                     toAnswer(EdTriageConcept.status.waitingForEvaluation, "waitingForEvaluation"),
