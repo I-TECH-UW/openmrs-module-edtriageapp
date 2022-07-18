@@ -70,11 +70,11 @@ angular.module("edTriageConceptFactory", [])
 
             this.treatment = {
                 oxygen: toAnswers('oxygen',
-                    [ toAnswer("90660681-4b00-469c-b65b-c91afd241c86","oxygen") ],
-                    "5f9721f5-83d9-40f4-bb30-5299c0840667"),
+                    [ toAnswer("81341AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","oxygen") ],
+                    "ba05cd0f-f656-4e9f-87db-c93f8303623b"),
                 paracetamol: toAnswers('paracetamol',
-                    [ toAnswer("3cccd4d6-26fe-102b-80cb-0017a47871b2","paracetamol") ],
-                    "5f9721f5-83d9-40f4-bb30-5299c0840667"),
+                    [ toAnswer("70116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","paracetamol") ],
+                    "ba05cd0f-f656-4e9f-87db-c93f8303623b"),
                 paracetamolDose: toAnswer("4bbd196b-fd51-43cb-b8e1-21f14035a76d", "paracetamolDose")
             }
 
