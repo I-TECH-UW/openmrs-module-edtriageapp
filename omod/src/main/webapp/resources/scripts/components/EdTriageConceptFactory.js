@@ -22,7 +22,7 @@ angular.module("edTriageConceptFactory", [])
             this.triageScore = toAnswer("f6ee497c-1db0-4c58-a55c-d65175a91fb9", "score");
             this.triageWaitingTime = toAnswer("0a84ea93-e057-4643-abe6-dca97426da8d", "triageWaitingTime");
             this.chiefComplaint = toAnswer("160531AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "chiefComplaint");
-            this.clinicalImpression = toAnswer("3cd9d956-26fe-102b-80cb-0017a47871b2", "clinicalImpression");
+            this.clinicalImpression = toAnswer("159395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "clinicalImpression");
             this.labs = {
                 glucose: toAnswer("3cd4e194-26fe-102b-80cb-0017a47871b2", "glucose", function(ageType, value){
                     if (!isNumber(value)) {
@@ -75,7 +75,7 @@ angular.module("edTriageConceptFactory", [])
                 paracetamol: toAnswers('paracetamol',
                     [ toAnswer("3cccd4d6-26fe-102b-80cb-0017a47871b2","paracetamol") ],
                     "5f9721f5-83d9-40f4-bb30-5299c0840667"),
-                paracetamolDose: toAnswer("5e7907c6-6a1e-4dcd-a3df-572b3a07e027", "paracetamolDose")
+                paracetamolDose: toAnswer("4bbd196b-fd51-43cb-b8e1-21f14035a76d", "paracetamolDose")
             }
 
             this.vitals = {
