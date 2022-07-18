@@ -24,7 +24,7 @@ angular.module("edTriageConceptFactory", [])
             this.chiefComplaint = toAnswer("160531AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "chiefComplaint");
             this.clinicalImpression = toAnswer("159395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "clinicalImpression");
             this.labs = {
-                glucose: toAnswer("3cd4e194-26fe-102b-80cb-0017a47871b2", "glucose", function(ageType, value){
+                glucose: toAnswer("887AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "glucose", function(ageType, value){
                     if (!isNumber(value)) {
                         return { numericScore: 0, colorCode: EdTriageConcept.score.green };
                     }
@@ -63,9 +63,9 @@ angular.module("edTriageConceptFactory", [])
                     }) ],
                     "d27cee7f-a4ad-4552-a1e0-7873d79de178"),
                 pregnancy_test: toAnswers('pregnancy_test',
-                    [toAnswer("3cd3a7a2-26fe-102b-80cb-0017a47871b2","positive", {numericScore: 0}, 'A'),
-                     toAnswer("3cd28732-26fe-102b-80cb-0017a47871b2","negative", {numericScore: 0}, 'A')],
-                    "3ce44134-26fe-102b-80cb-0017a47871b2")
+                    [toAnswer("703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","positive", {numericScore: 0}, 'A'),
+                     toAnswer("664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","negative", {numericScore: 0}, 'A')],
+                    "1945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
             };
 
             this.treatment = {
@@ -111,7 +111,7 @@ angular.module("edTriageConceptFactory", [])
                         return { numericScore: 3, colorCode: EdTriageConcept.score.green };
                     }
                 }),
-                oxygenSaturation: toAnswer("3ce9401c-26fe-102b-80cb-0017a47871b2", "oxygenSaturation", function(ageType, value){
+                oxygenSaturation: toAnswer("5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "oxygenSaturation", function(ageType, value){
                     if (!isNumber(value)) {
                         return { numericScore: 0, colorCode: EdTriageConcept.score.green };
                     }
@@ -155,7 +155,7 @@ angular.module("edTriageConceptFactory", [])
                         return { numericScore: 3, colorCode: EdTriageConcept.score.green };
                     }
                 }),
-                systolicBloodPressure: toAnswer("3ce934fa-26fe-102b-80cb-0017a47871b2", "systolicBloodPressure", function(ageType, value){
+                systolicBloodPressure: toAnswer("5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "systolicBloodPressure", function(ageType, value){
                     if (!isNumber(value)) {
                         return { numericScore: 0, colorCode: EdTriageConcept.score.green };
                     }
@@ -168,10 +168,10 @@ angular.module("edTriageConceptFactory", [])
                     }
                     return { numericScore: 0, colorCode: EdTriageConcept.score.green };
                 }, EdTriageConcept.ageType.ADULT),
-                diastolicBloodPressure: toAnswer("3ce93694-26fe-102b-80cb-0017a47871b2", "diastolicBloodPressure", function(ageType, value){
+                diastolicBloodPressure: toAnswer("5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "diastolicBloodPressure", function(ageType, value){
                     return  { numericScore: 0, colorCode: EdTriageConcept.score.green };
                 }, EdTriageConcept.ageType.ADULT),
-                temperature: toAnswer("3ce939d2-26fe-102b-80cb-0017a47871b2", "temperature", function(ageType, value){
+                temperature: toAnswer("5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "temperature", function(ageType, value){
                     if (!isNumber(value)) {
                         return { numericScore: 0, colorCode: EdTriageConcept.score.green };
                     }
@@ -193,7 +193,7 @@ angular.module("edTriageConceptFactory", [])
                 trauma: toAnswers('trauma', [toAnswer("124193AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "trauma", function(ageType, value){
                     return value.length > 0 ?  { numericScore: 1, colorCode: EdTriageConcept.score.green } :  { numericScore: 0, colorCode: EdTriageConcept.score.green };})],
                     GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
-                weight: toAnswer("3ce93b62-26fe-102b-80cb-0017a47871b2", "weight", function(ageType, value){
+                weight: toAnswer("5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "weight", function(ageType, value){
                     return  { numericScore: 0, colorCode: EdTriageConcept.score.green };
                 })
             } ;
@@ -328,7 +328,7 @@ angular.module("edTriageConceptFactory", [])
 
         EdTriageConcept.heartRate = "3ce93824-26fe-102b-80cb-0017a47871b2";
         EdTriageConcept.respiratoryRate = "3ceb11f8-26fe-102b-80cb-0017a47871b2";
-        EdTriageConcept.oxygenSaturation = "3ce9401c-26fe-102b-80cb-0017a47871b2";
+        EdTriageConcept.oxygenSaturation = "5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         EdTriageConcept.numericScore = "f6ee497c-1db0-4c58-a55c-d65175a91fb9";
 
         EdTriageConcept.lowGlucoseLevel = {
