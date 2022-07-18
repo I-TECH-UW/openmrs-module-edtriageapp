@@ -190,7 +190,7 @@ angular.module("edTriageConceptFactory", [])
                         toAnswer("162644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "responds to pain", { numericScore: 2, colorCode: EdTriageConcept.score.green }, null, 4),
                         toAnswer("f7a1fd17-f12d-48c1-b3dd-8e9fc95c8100", "unresponsive",  { numericScore: 3, colorCode: EdTriageConcept.score.green }, null, 5)],
                     GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
-                trauma: toAnswers('trauma', [toAnswer("124193AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "trauma", function(ageType, value){
+                trauma: toAnswers('trauma', [toAnswer("	124193AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "trauma", function(ageType, value){
                     return value.length > 0 ?  { numericScore: 1, colorCode: EdTriageConcept.score.green } :  { numericScore: 0, colorCode: EdTriageConcept.score.green };})],
                     GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 weight: toAnswer("5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "weight", function(ageType, value){
@@ -221,18 +221,18 @@ angular.module("edTriageConceptFactory", [])
                     toAnswer("116543AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "burn-other",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 4)]
                     ,GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 diabetic: toAnswers('diabetic',[
-                    toAnswer("07ece75a-2a53-44ff-be48-15a4f7abc28a", "Ketonuria",  { numericScore: 0, colorCode: EdTriageConcept.score.green }, 'AC')]
+                    toAnswer("163486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Ketonuria",  { numericScore: 0, colorCode: EdTriageConcept.score.green }, 'AC')]
                     ,GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 trauma: toAnswers('trauma',[
-                    toAnswer("3b7f125b-6254-4442-be14-f8f6543c8d63", "serious trauma",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 1),
-                    toAnswer("cef19dbc-e015-4123-9479-986f26a7ca8c", "threatened limb",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, EdTriageConcept.ageType.ADULT, 2),
-                    toAnswer("aca0abff-a38a-4191-a5c4-041fa1809306", "dislocation of larger joint (not finger or toe)",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 3),
+                    toAnswer("37f88bdb-44b5-4d1c-835f-5ba174bcf580", "serious trauma",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 1),
+                    toAnswer("163479AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "threatened limb",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, EdTriageConcept.ageType.ADULT, 2),
+                    toAnswer("163480AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "dislocation of larger joint (not finger or toe)",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 3),
                     toAnswer("132338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "open fracture",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 4),
-                    toAnswer("628ccc25-d0b3-4e73-b01e-1fdd840256bd", "haemorrhage - uncontrolled",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 5),
-                    toAnswer("6720b77d-b563-44dc-aa17-c9dcb37db8e8", "Cannot support any weight",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, EdTriageConcept.ageType.INFANT, 6),
-                    toAnswer("a218b3d9-2ead-4fa2-afbd-64849012e125", "dislocation of finger or toe",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 7),
+                    toAnswer("163482AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "haemorrhage - uncontrolled",  { numericScore: 0, colorCode: EdTriageConcept.score.orange }, null, 5),
+                    toAnswer("0b05c6a7-7bbe-4b67-ab58-84b1cc2ce7fc", "Cannot support any weight",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, EdTriageConcept.ageType.INFANT, 6),
+                    toAnswer("163481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "dislocation of finger or toe",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 7),
                     toAnswer("139899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "fracture - closed",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 8),
-                    toAnswer("6807f3b3-4176-49d7-80ff-41603d5c612b", "haemorrhage - controlled",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 9)]
+                    toAnswer("163483AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "haemorrhage - controlled",  { numericScore: 0, colorCode: EdTriageConcept.score.yellow }, null, 9)]
                     ,GENERIC_TRIAGE_SYMPTOM_CONCEPT_SET_UUID),
                 digestive: toAnswers('digestive',[
                     toAnswer("139006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "vomiting - fresh blood",  { numericScore: 0, colorCode: EdTriageConcept.score.orange}, EdTriageConcept.ageType.ADULT, 1),
