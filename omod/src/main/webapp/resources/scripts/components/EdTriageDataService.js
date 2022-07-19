@@ -14,9 +14,9 @@ angular.module("edTriageDataService", [])
                     PATIENT_DASHBOARD:"coreapps/clinicianfacing/patient.page?patientId=PATIENT_UUID&app=pih.app.clinicianDashboard",
                     ACTIVE_VISIT: "/" + OPENMRS_CONTEXT_PATH  + "/ws/rest/emrapi/activevisit"
                 },
-                ED_TRIAGE_CONCEPT_UUIDS: ["a0a68409-94a7-4216-a4db-af95b962b1fd"] ,
-                ED_TRIAGE_ENCOUNTER_TYPE: "1ca35231-14d6-45c1-b380-14a4d02115eb",
-                CONSULTING_CLINICIAN_ENCOUNTER_ROLE: "240b26f9-dd88-4172-823d-4a8bfeb7841f"
+                ED_TRIAGE_CONCEPT_UUIDS:["a0a68409-94a7-4216-a4db-af95b962b1fd"],
+                ED_TRIAGE_ENCOUNTER_TYPE:"1ca35231-14d6-45c1-b380-14a4d02115eb",
+                CONSULTING_CLINICIAN_ENCOUNTER_ROLE:"240b26f9-dd88-4172-823d-4a8bfeb7841f"
             };
 
             /* load a the concept definition for a ed triage patient
