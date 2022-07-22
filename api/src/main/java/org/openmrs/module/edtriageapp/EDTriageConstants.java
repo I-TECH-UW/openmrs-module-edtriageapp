@@ -5,9 +5,9 @@ public class EDTriageConstants {
 
     public static final String ED_TRIAGE = "edtriageapp.app.edTriage";
     public static final String ED_TRIAGE_QUEUE = "edtriageapp.app.triageQueue";
-    public static final String TRIAGE_QUEUE_STATUS_CONCEPT_UUID = "66c18ba5-459e-4049-94ab-f80aca5c6a98";
-    public static final String TRIAGE_QUEUE_WAITING_FOR_EVALUATION_CONCEPT_UUID = "4dd3244d-fcb9-424d-ad8a-afd773c69923";
-    public static final String TRIAGE_QUEUE_EXPIRED_CONCEPT_UUID = "1fa8d25e-7471-4201-815f-79fac44d9a5f";
-    public static final String TRIAGE_WAITING_TIME_UUID = "d9a8fc6f-8695-46b8-854f-2c9e818b4568";
-    public static final String ED_TRIAGE_ENCOUNTER_TYPE_UUID = "74cef0a6-2801-11e6-b67b-9e71128cae77";
+    public static final String TRIAGE_QUEUE_STATUS_CONCEPT_UUID = "9dbc0bfa-193e-4fc4-a1e3-3b1475ff305d";
+    public static final String TRIAGE_QUEUE_WAITING_FOR_EVALUATION_CONCEPT_UUID = "90b571f3-5a4e-4634-903b-e322888c469a";
+    public static final String TRIAGE_QUEUE_EXPIRED_CONCEPT_UUID = "99928547-6b1e-4ccf-9a43-2c71c527f8eb";
+    public static final String TRIAGE_WAITING_TIME_UUID = "0a84ea93-e057-4643-abe6-dca97426da8d";
+    public static final String ED_TRIAGE_ENCOUNTER_TYPE_UUID = "1ca35231-14d6-45c1-b380-14a4d02115eb";
 }

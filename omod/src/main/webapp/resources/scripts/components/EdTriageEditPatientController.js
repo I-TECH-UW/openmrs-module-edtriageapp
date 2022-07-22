@@ -166,7 +166,7 @@ angular.module("edTriagePatientController", [])
                         }
                         else {
                             //var url = $scope.patientDashboard.replace("{{patientId}}", $scope.edTriagePatient.patient.uuid);
-                           // emr.navigateTo({applicationUrl: url});
+                              emr.navigateTo({applicationUrl: EdTriageDataService.CONSTANTS.URLS.FIND_PATIENT});
                         }
                     });
                 })
