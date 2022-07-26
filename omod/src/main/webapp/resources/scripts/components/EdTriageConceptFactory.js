@@ -67,7 +67,6 @@ angular.module("edTriageConceptFactory", [])
                      toAnswer("664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","negative", {numericScore: 0}, 'A')],
                     "1945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
             };
-
             this.treatment = {
                 oxygen: toAnswers('oxygen',
                     [ toAnswer("81341AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA","oxygen") ],

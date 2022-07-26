@@ -445,7 +445,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 								<td>
 									<input ng-disabled="!editable" id="paracetamol" type="checkbox"
 										   	ng-model="edTriagePatient.treatment.paracetamol.value"
-											ng-true-value="'3cccd4d6-26fe-102b-80cb-0017a47871b2'"/>
+											ng-true-value="'70116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"/>
 								</td>
 							</tr>
 							<tr ng-if="edTriagePatient.patient.ageType == 'C'">
@@ -467,7 +467,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 								<td>
 									<input ng-disabled="!editable" id="oxygen" type="checkbox"
 										   	ng-model="edTriagePatient.treatment.oxygen.value"
-											ng-true-value="'90660681-4b00-469c-b65b-c91afd241c86'"/>
+											ng-true-value="'81341AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"/>
 								</td>
 							</tr>
 							</tbody>
