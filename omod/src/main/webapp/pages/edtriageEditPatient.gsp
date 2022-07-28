@@ -142,13 +142,13 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 				<div class="col-xs-4">
 					<input ng-disabled="!editable" id="impairedBreathing" type="checkbox"
 						   ng-model="edTriagePatient.symptoms.emergencySigns.value"
-						   ng-true-value="'3cedf31e-26fe-102b-80cb-0017a47871b2'"/>
+						   ng-true-value="'142373AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"/>
 					<label>${ui.message("edtriageapp.emergencySigns.impairedBreathing")}</label>
 				</div>
 				<div class="col-xs-4">
 					<input ng-disabled="!editable" id="shock" type="checkbox"
 						   ng-model="edTriagePatient.symptoms.emergencySigns.value"
-						   ng-true-value="'911c064e-5247-4017-a9fd-b30105c36052'"/>
+						   ng-true-value="'112989AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"/>
 					<label>${ui.message("edtriageapp.emergencySigns.shock")}</label>
 				</div>
 			</div>
@@ -384,7 +384,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 											<td>
 												<input ng-disabled="!editable" id="highGlucoseLevel" type="checkbox"
 													   ng-model="edTriagePatient.labs.highGlucoseLevel.value"
-													   ng-true-value="'3cd6f600-26fe-102b-80cb-0017a47871b2'"
+													   ng-true-value="'1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
 													   ng-change="handleGlucoseLevel('highGlucoseLevel')"/>
 												<label>${ui.message("edtriageapp.high")}</label>
 											</td>
@@ -393,7 +393,7 @@ ${ ui.includeFragment("coreapps", "patientHeader", [ patient: patient ]) }
 											<td>
 												<input ng-disabled="!editable" id="lowGlucoseLevel" type="checkbox"
 													   ng-model="edTriagePatient.labs.lowGlucoseLevel.value"
-													   ng-true-value="'3cd6f600-26fe-102b-80cb-0017a47871b2'"
+													   ng-true-value="'1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
 													   ng-change="handleGlucoseLevel('lowGlucoseLevel')"/>
 												<label>${ui.message("edtriageapp.low")}</label>
 											</td>
