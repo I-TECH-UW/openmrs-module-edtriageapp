@@ -55,9 +55,8 @@ public class EDTriageAppActivator extends BaseModuleActivator implements DaemonT
 			DataImporter dataImporter = Context.getRegisteredComponent("dataImporter", DataImporter.class);
 			
 			try {
-				dataImporter.importData("UCI_Concepts.xml");
-				dataImporter.importData("System_review_concepts.xml");
-				dataImporter.importData("Physical_exam_concepts.xml");
+				dataImporter.importData("ed_Triage_Concepts.xml");
+			
 			}
 			catch (Exception e) {
 				e.printStackTrace();
