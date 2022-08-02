@@ -19,24 +19,33 @@ import java.lang.reflect.InvocationTargetException;
 import org.apache.commons.logging.Log;
 
 import org.apache.commons.logging.LogFactory;
+import org.openmrs.Concept;
 import org.openmrs.ConceptName;
 import org.openmrs.GlobalProperty;
+import org.openmrs.api.AdministrationService;
+import org.openmrs.api.ConceptService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.BaseModuleActivator;
 import org.openmrs.module.DaemonToken;
 import org.openmrs.module.DaemonTokenAware;
 import org.openmrs.module.ModuleActivator;
+import org.openmrs.module.edtriageapp.api.initializer.ConceptsInitializer;
+import org.openmrs.module.edtriageapp.api.initializer.Initializer;
 import org.openmrs.module.edtriageapp.task.TriageTask;
 import org.openmrs.module.dataexchange.DataImporter;
 
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * This class contains the logic that is run every time this module is either started or stopped.
  */
 public class EDTriageAppActivator extends BaseModuleActivator implements DaemonTokenAware{
+	ConceptService conceptService;
+	AdministrationService adminService;
 	
 	protected Log log = LogFactory.getLog(getClass());
   
@@ -45,8 +54,40 @@ public class EDTriageAppActivator extends BaseModuleActivator implements DaemonT
 	 */
 	public void started() {
 		TriageTask.setEnabled(true);
-		//installConcepts();
+		try {
+			
+			for (Initializer initializer : getInitializers()) {
+				initializer.started();
+			}
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+		
+		setConceptsSetGp();
 		log.info("ED Triage App Module started");
+	}
+	
+	private List<Initializer> getInitializers() {
+		List<Initializer> l = new ArrayList<Initializer>();
+		l.add(new ConceptsInitializer());
+	
+		return l;
+	}
+	
+	public void setConceptsSetGp() {
+		adminService = Context.getAdministrationService();
+		conceptService = Context.getConceptService();
+		try {
+			Concept triageSet = conceptService.getConceptByName(EDTriageConstants.TRIAGE_CONCEPT_SET_OF_SETS);
+			adminService.setGlobalProperty(EDTriageConstants.TRIAGE_SET_GP, triageSet.getUuid());
+		}
+		catch (Exception e) {
+			log.info("failed to set Concept_set Global Property");
+		}
+		
 	}
 
 	/**

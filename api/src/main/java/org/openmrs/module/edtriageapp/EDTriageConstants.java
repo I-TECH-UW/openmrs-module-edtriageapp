@@ -12,4 +12,6 @@ public class EDTriageConstants {
     public static final String ED_TRIAGE_ENCOUNTER_TYPE_UUID = "1ca35231-14d6-45c1-b380-14a4d02115eb";
     public static final String EDTRIAGE_VERSION_GP = "edtriage_metadata.installedVersion";
     public static final Integer EDTRIAGE_METADATA_VERSION = 6;
+    public static final String TRIAGE_CONCEPT_SET_OF_SETS = "HUM Triage set";
+    public static final String TRIAGE_SET_GP = "emr.concept.triageSetOfSets";
 }
