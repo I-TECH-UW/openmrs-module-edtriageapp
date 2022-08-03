@@ -11,12 +11,13 @@ import org.openmrs.GlobalProperty;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.dataexchange.DataImporter;
 import org.openmrs.module.edtriageapp.EDTriageConstants;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class ConceptsInitializer  implements Initializer{
 	
 	    protected Log log = LogFactory.getLog(getClass());
-	
-	  
+	    
+
 		private void installConcepts() {
 			GlobalProperty installedVersion = Context.getAdministrationService().getGlobalPropertyObject(
 			   EDTriageConstants.EDTRIAGE_VERSION_GP);

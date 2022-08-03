@@ -14,11 +14,12 @@
 	
      <dependencies>
         <!-- Begin OpenMRS core -->
-        <dependency>
-           <groupId>org.openmrs.module</groupId>
-           <artifactId>dataexchange-api</artifactId>
-           <version>1.3.7</version>
-       </dependency>
+         <dependency>
+            	<groupId>org.openmrs.module</groupId>
+            	<artifactId>dataexchange-api</artifactId>
+            	<version>${dataexchangeVersion}</version>
+                <scope>provided</scope>
+            </dependency>
 
     </dependencies>
 	

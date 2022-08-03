@@ -14,14 +14,12 @@
 package org.openmrs.module.edtriageapp;
 
 
-import java.lang.reflect.InvocationTargetException;
 
 import org.apache.commons.logging.Log;
 
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.Concept;
-import org.openmrs.ConceptName;
-import org.openmrs.GlobalProperty;
+
 import org.openmrs.api.AdministrationService;
 import org.openmrs.api.ConceptService;
 import org.openmrs.api.context.Context;
@@ -32,10 +30,8 @@ import org.openmrs.module.ModuleActivator;
 import org.openmrs.module.edtriageapp.api.initializer.ConceptsInitializer;
 import org.openmrs.module.edtriageapp.api.initializer.Initializer;
 import org.openmrs.module.edtriageapp.task.TriageTask;
-import org.openmrs.module.dataexchange.DataImporter;
 
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,7 +62,7 @@ public class EDTriageAppActivator extends BaseModuleActivator implements DaemonT
 			
 		}
 		
-		setConceptsSetGp();
+
 		log.info("ED Triage App Module started");
 	}
 	
@@ -77,18 +73,7 @@ public class EDTriageAppActivator extends BaseModuleActivator implements DaemonT
 		return l;
 	}
 	
-	public void setConceptsSetGp() {
-		adminService = Context.getAdministrationService();
-		conceptService = Context.getConceptService();
-		try {
-			Concept triageSet = conceptService.getConceptByName(EDTriageConstants.TRIAGE_CONCEPT_SET_OF_SETS);
-			adminService.setGlobalProperty(EDTriageConstants.TRIAGE_SET_GP, triageSet.getUuid());
-		}
-		catch (Exception e) {
-			log.info("failed to set Concept_set Global Property");
-		}
-		
-	}
+
 
 	/**
 	 * @see ModuleActivator#stopped()
