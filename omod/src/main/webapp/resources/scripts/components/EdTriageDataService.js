@@ -15,7 +15,7 @@ angular.module("edTriageDataService", [])
                     ACTIVE_VISIT: "/" + OPENMRS_CONTEXT_PATH  + "/ws/rest/emrapi/activevisit"
                 },
                 ED_TRIAGE_CONCEPT_UUIDS:["a0a68409-94a7-4216-a4db-af95b962b1fd"],
-                ED_TRIAGE_ENCOUNTER_TYPE:"0f8dfd37-8fe1-48da-94d2-b2a6978c6d3a",
+                ED_TRIAGE_ENCOUNTER_TYPE:"7979c56f-5375-44ee-a3be-74849fae5c2d",
                 CONSULTING_CLINICIAN_ENCOUNTER_ROLE:"240b26f9-dd88-4172-823d-4a8bfeb7841f"
             };
 
