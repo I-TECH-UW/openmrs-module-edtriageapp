@@ -49,7 +49,7 @@ public class EDTriageAppActivator extends BaseModuleActivator implements DaemonT
 	public void started() {
 		
 		TriageTask.setEnabled(true);
-		/*
+		
 		
 		try {
 			
@@ -61,7 +61,7 @@ public class EDTriageAppActivator extends BaseModuleActivator implements DaemonT
 			e.printStackTrace();
 			
 		}
-		*/
+		
 
 		log.info("ED Triage App Module started");
 	}
