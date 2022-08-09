@@ -42,89 +42,90 @@ import java.util.Set;
  * It is a default implementation of {@link EdTriageAppService}.
  */
 public class EdTriageAppServiceImpl extends BaseOpenmrsService implements EdTriageAppService {
-
+    
     private AdtService adtService;
-
+    
     private PatientService patientService;
-
+    
     private LocationService locationService;
-
+    
     private ObsService obsService;
-
+    
     private ConceptService conceptService;
-
+    
     private EdTriageAppDAO dao;
-	
-	/**
+    
+    /**
      * @param dao the dao to set
      */
     public void setDao(EdTriageAppDAO dao) {
-	    this.dao = dao;
+        this.dao = dao;
     }
     
     /**
      * @return the dao
      */
     public EdTriageAppDAO getDao() {
-	    return dao;
+        return dao;
     }
-
+    
     public AdtService getAdtService() {
         return adtService;
     }
-
+    
     public void setAdtService(AdtService adtService) {
         this.adtService = adtService;
     }
-
+    
     public PatientService getPatientService() {
         return patientService;
     }
-
+    
     public void setPatientService(PatientService patientService) {
         this.patientService = patientService;
     }
-
+    
     public LocationService getLocationService() {
         return locationService;
     }
-
+    
     public void setLocationService(LocationService locationService) {
         this.locationService = locationService;
     }
-
+    
     public ObsService getObsService() {
         return obsService;
     }
-
+    
     public void setObsService(ObsService obsService) {
         this.obsService = obsService;
     }
-
+    
     public ConceptService getConceptService() {
         return conceptService;
     }
-
+    
     public void setConceptService(ConceptService conceptService) {
         this.conceptService = conceptService;
     }
-
+    
     @Override
     @Transactional(readOnly = true)
     public List<Encounter> getActiveEDTriageEncounters(int hoursBack, String locationUuid, String patientUuid) {
-
+        
         List<Encounter> ret = new ArrayList<Encounter>();
         List<Encounter> temp = getAllEDTriageEncounters(hoursBack, locationUuid, patientUuid);
-
+        
         for (Encounter enc : temp) {
-
+            
             // to be active, encounter must belong to an active visit, or no visit
             if (enc.getVisit() == null || enc.getVisit().getStopDatetime() == null) {
                 Set<Obs> observations = enc.getObs();
                 for (Obs obs : observations) {
                     if (EDTriageConstants.TRIAGE_QUEUE_STATUS_CONCEPT_UUID.equals(obs.getConcept().getUuid())
                             && obs.getValueCoded() != null
-                            && EDTriageConstants.TRIAGE_QUEUE_WAITING_FOR_EVALUATION_CONCEPT_UUID.equals(obs.getValueCoded().getUuid())) {
+                            && EDTriageConstants.TRIAGE_QUEUE_WAITING_FOR_EVALUATION_CONCEPT_UUID
+                                    .equals(obs.getValueCoded().getUuid())) {
                         //this is an active record, so add it to the queue
                         ret.add(enc);
                         break;
@@ -132,58 +133,60 @@ public class EdTriageAppServiceImpl extends BaseOpenmrsService implements EdTria
                 }
             }
         }
-
+        
         return ret;
     }
-
+    
     @Override
     @Transactional(readOnly = true)
-    public List<Encounter> getAllEDTriageEncounters(int hoursBack, String locationUuid, String patientUuid){
+    public List<Encounter> getAllEDTriageEncounters(int hoursBack, String locationUuid, String patientUuid) {
         return dao.getAllEDTriageEncountersForPatientAtLocation(hoursBack, locationUuid, patientUuid);
     }
-
+    
     @Override
     @Transactional(readOnly = true)
     public Encounter getEDTriageEncounterForActiveVisit(String locationUuid, String patientUuid) {
-
+        
         if (StringUtils.isBlank(locationUuid) || StringUtils.isBlank(patientUuid)) {
             return null;
         }
-
+        
         Patient patient = patientService.getPatientByUuid(patientUuid);
         Location location = locationService.getLocationByUuid(locationUuid);
-
+        
         if (patient == null || location == null) {
             return null;
         }
-
+        
         VisitDomainWrapper visit = adtService.getActiveVisit(patient, location);
-
+        
         if (visit == null) {
             return null;
         }
-
+        
         // there should only be one ED Triage encounter per visit, but if there are multiple, this will just return the most recent
         for (Encounter encounter : visit.getSortedEncounters()) {
             if (EDTriageConstants.ED_TRIAGE_ENCOUNTER_TYPE_UUID.equals(encounter.getEncounterType().getUuid())) {
                 return encounter;
             }
-
+            
         }
         return null;
     }
-
+    
     @Override
     @Transactional
     public void expireEDTriageEncounters() {
-
+        
         Concept triageQueueStatus = conceptService.getConceptByUuid(EDTriageConstants.TRIAGE_QUEUE_STATUS_CONCEPT_UUID);
-        Concept waitingForEvaluation = conceptService.getConceptByUuid(EDTriageConstants.TRIAGE_QUEUE_WAITING_FOR_EVALUATION_CONCEPT_UUID);
+        Concept waitingForEvaluation = conceptService
+                .getConceptByUuid(EDTriageConstants.TRIAGE_QUEUE_WAITING_FOR_EVALUATION_CONCEPT_UUID);
         Concept expired = conceptService.getConceptByUuid(EDTriageConstants.TRIAGE_QUEUE_EXPIRED_CONCEPT_UUID);
-
-        List<Obs> waitingForEvaluationObs = obsService.getObservations(null, null, Collections.singletonList(triageQueueStatus),
-                Collections.singletonList(waitingForEvaluation), null, null, null, null, null, null, null, false);
-
+        
+        List<Obs> waitingForEvaluationObs = obsService.getObservations(null, null,
+            Collections.singletonList(triageQueueStatus), Collections.singletonList(waitingForEvaluation), null, null, null,
+            null, null, null, null, false);
+        
         for (Obs obs : waitingForEvaluationObs) {
             // TODO these obs should *always* be associated with a visit, but just in case we check--should probably do something else here as well
             Encounter encounter = obs.getEncounter();
@@ -197,5 +200,5 @@ public class EdTriageAppServiceImpl extends BaseOpenmrsService implements EdTria
             }
         }
     }
-
+    
 }

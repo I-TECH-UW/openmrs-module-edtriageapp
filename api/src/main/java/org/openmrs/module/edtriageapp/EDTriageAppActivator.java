@@ -13,8 +13,6 @@
  */
 package org.openmrs.module.edtriageapp;
 
-
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.ConceptName;
@@ -36,43 +34,37 @@ import java.lang.reflect.Method;
 /**
  * This class contains the logic that is run every time this module is either started or stopped.
  */
-public class EDTriageAppActivator extends BaseModuleActivator implements DaemonTokenAware{
+public class EDTriageAppActivator extends BaseModuleActivator implements DaemonTokenAware {
 	
 	ConceptService conceptService;
+	
 	AdministrationService adminService;
 	
 	protected Log log = LogFactory.getLog(getClass());
-  
+	
 	/**
 	 * @see ModuleActivator#started()
 	 */
 	public void started() {
 		
 		TriageTask.setEnabled(true);
-		
-		
 		try {
-			
 			installConcepts();
-			
 		}
-		catch(Exception e) {
-			
+		catch (Exception e) {
 			e.printStackTrace();
-			
 		}
 		
-
 		log.info("ED Triage App Module started");
 	}
-
+	
 	/**
 	 * @see ModuleActivator#stopped()
 	 */
 	public void stopped() {
 		log.info("ED Triage App Module stopped");
 	}
-
+	
 	@Override
 	public void setDaemonToken(DaemonToken daemonToken) {
 		TriageTask.setDaemonToken(daemonToken);
@@ -80,31 +72,26 @@ public class EDTriageAppActivator extends BaseModuleActivator implements DaemonT
 	
 	private void installConcepts() {
 		
-		GlobalProperty installedVersion = Context.getAdministrationService().getGlobalPropertyObject(EDTriageConstants.EDTRIAGE_VERSION_GP);
+		GlobalProperty installedVersion = Context.getAdministrationService()
+		        .getGlobalPropertyObject(EDTriageConstants.EDTRIAGE_VERSION_GP);
 		
 		if (installedVersion == null) {
 			installedVersion = new GlobalProperty(EDTriageConstants.EDTRIAGE_VERSION_GP, "0");
 		}
 		
 		if (Integer.valueOf(installedVersion.getPropertyValue()) < EDTriageConstants.EDTRIAGE_METADATA_VERSION) {
-			
-			Context.flushSession(); //Flush so that purges are not deferred until after data import
-			
-			log.info("Started importing concepts........................................");
-			
+			Context.flushSession(); //Flush so that purges are not deferred until after data import	
+			log.info("Started importing concepts");
 			DataImporter dataImporter = Context.getRegisteredComponent("dataImporter", DataImporter.class);
-			
 			try {
-				
 				dataImporter.importData("ed_Triage_Concepts.xml");
 				dataImporter.importData("encounter_type.xml");
 			}
 			catch (Exception e) {
 				e.printStackTrace();
-				//System.out.print(e.toString());
 			}
 			
-			log.info("finished importing concepts........................................");
+			log.info("finished ED metadata");
 			
 			//1.11 requires building the index for the newly added concepts.
 			//Without doing so, cs.getConceptByClassName() will return an empty list.

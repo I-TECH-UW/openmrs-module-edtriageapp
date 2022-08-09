@@ -22,7 +22,7 @@ import java.util.List;
  * Database methods for {@link EdTriageAppService}.
  */
 public interface EdTriageAppDAO {
-
+    
     /*
      * gets all the ED Triage encounters for a patient at a location, the location and or the patient are not provided
      *  then the filter will not be applied
@@ -31,5 +31,5 @@ public interface EdTriageAppDAO {
      * @param patientUuid - (optional) the patient UUID for the encounters
      */
     List<Encounter> getAllEDTriageEncountersForPatientAtLocation(int hoursBack, String locationUuid, String patientId);
-
-   }
+    
+}

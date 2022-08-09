@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
-<encounter_type encounter_type_id="2" name="Emergency Triage" description="emergency triage" creator="1" date_created="2022-08-08 11:15:57" retired="false" uuid="bf715c87-eda5-49df-b1b1-08639da1fdcc"/>
+<encounter_type encounter_type_id="40" name="Emergency Triage" description="emergency triage" creator="1" date_created="2022-08-08 11:15:57" retired="false" uuid="bf715c87-eda5-49df-b1b1-08639da1fdcc"/>
 </dataset>
