@@ -97,6 +97,7 @@ public class EDTriageAppActivator extends BaseModuleActivator implements DaemonT
 			try {
 				
 				dataImporter.importData("ed_Triage_Concepts.xml");
+				dataImporter.importData("encounter_type.xml");
 			}
 			catch (Exception e) {
 				e.printStackTrace();
