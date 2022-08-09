@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * Tests {@link EdTriageAppService}.
  */
-public class EdTriageAppServiceTest extends BaseModuleContextSensitiveTest {
+public class EdTriageAppServiceTest {
 
     private static final Log log = LogFactory.getLog(EdTriageAppServiceTest.class);
 
@@ -49,6 +49,8 @@ public class EdTriageAppServiceTest extends BaseModuleContextSensitiveTest {
     private static final String TEST_PATIENT = "da7f524f-27ce-4bb2-86d6-6d1d05312bd5";
     private static final String TEST_ENCOUNTER_DATE = "2016-06-09 12:00:00.0";
     private static final SimpleDateFormat FMT =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+    
+    /*
 
    // @Before
     public void before() throws Exception {
@@ -82,7 +84,10 @@ public class EdTriageAppServiceTest extends BaseModuleContextSensitiveTest {
         assertEquals(TOTAL_ALL_ENCOUNTERS, list.size());
     }
 
+    */
+    /*
     /* prints results*/
+    /*
     private static void printResults(List<Encounter> list){
         if(log.isErrorEnabled()){
             StringBuilder ss = new StringBuilder();
@@ -99,8 +104,11 @@ public class EdTriageAppServiceTest extends BaseModuleContextSensitiveTest {
             log.error(ss);
         }
     }
+    
+    */
 
     /* gets the hours back for testing, b/c the test data date is static*/
+    /*
     private static int getHoursBack(){
         int ret = 0;
         try {
@@ -113,5 +121,5 @@ public class EdTriageAppServiceTest extends BaseModuleContextSensitiveTest {
 
         return ret;
     }
-
+   */
 }

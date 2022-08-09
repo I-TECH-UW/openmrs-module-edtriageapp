@@ -11,6 +11,18 @@
 	<packaging>jar</packaging>
 	<name>ED Triage App Module API</name>
 	<description>API project for EDTriageApp</description>
+	
+     <dependencies>
+        <!-- Begin OpenMRS core -->
+         <dependency>
+            	<groupId>org.openmrs.module</groupId>
+            	<artifactId>dataexchange-api</artifactId>
+            	<version>${dataexchangeVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+    </dependencies>
+	
 
     <build>
         <resources>

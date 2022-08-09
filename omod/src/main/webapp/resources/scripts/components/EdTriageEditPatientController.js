@@ -1,7 +1,7 @@
 angular.module("edTriagePatientController", [])
     .controller("patientEditController", ['$scope', '$filter', '$element', '$timeout','EdTriageDataService', 'EdTriageConcept',
-        'patientUuid', 'patientDashboard', 'ngDialog', 'patientBirthDate', 'patientGender', 'locationUuid', 'encounterUuid', 'returnUrl', 'editable','serverDateTimeInMillis',
-        function ($scope, $filter, $element, $timeout, EdTriageDataService, EdTriageConcept, patientUuid, patientDashboard, ngDialog, patientBirthDate,
+        'patientUuid', 'ngDialog', 'patientBirthDate', 'patientGender', 'locationUuid', 'encounterUuid', 'returnUrl', 'editable','serverDateTimeInMillis',
+        function ($scope, $filter, $element, $timeout, EdTriageDataService, EdTriageConcept, patientUuid, ngDialog, patientBirthDate,
                   patientGender, locationUuid, encounterUuid, returnUrl, editable, serverDateTimeInMillis) {
             $scope.loading_complete = false;//used to tell if we when all the data has been loaded
             $scope.isSaving = false; // used to determine if we should disable things
@@ -12,7 +12,7 @@ angular.module("edTriagePatientController", [])
             $scope.tempInC = null;
             $scope.tempInF = null;
             $scope.editable = editable ? editable : false;
-            $scope.patientDashboard = patientDashboard;
+            //$scope.patientDashboard = patientDashboard;
             $scope.lastUpdatedAtInMillis = new Date().getTime();
             $scope.serverTimeDelta = $scope.lastUpdatedAtInMillis - serverDateTimeInMillis;
 
@@ -165,8 +165,8 @@ angular.module("edTriagePatientController", [])
                             $scope.isSaving = false;
                         }
                         else {
-                            var url = $scope.patientDashboard.replace("{{patientId}}", $scope.edTriagePatient.patient.uuid);
-                            emr.navigateTo({applicationUrl: url});
+                            //var url = $scope.patientDashboard.replace("{{patientId}}", $scope.edTriagePatient.patient.uuid);
+                              emr.navigateTo({applicationUrl: EdTriageDataService.CONSTANTS.URLS.FIND_PATIENT});
                         }
                     });
                 })
