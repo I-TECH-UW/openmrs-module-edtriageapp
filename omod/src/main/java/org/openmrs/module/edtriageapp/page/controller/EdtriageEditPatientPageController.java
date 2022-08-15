@@ -46,26 +46,8 @@ public class EdtriageEditPatientPageController {
 
         model.addAttribute("encounter", encounter);
         model.addAttribute("editable", editable != null ? editable : true);
+        model.addAttribute("dashboardUrl", "coreapps/clinicianfacing/patient.page?patientId={{patient.patientId}}");
         
-        
-        /*
-
-        AppDescriptor app = app = appFrameworkService.getApp(EDTriageConstants.ED_TRIAGE);
-        String patientDashboard = null;
-        if (app != null) {
-            ObjectNode config = app.getConfig();
-            JsonNode afterSelectedUrl = config.get("afterSelectedUrl");
-            if (afterSelectedUrl != null) {
-                String textValue = afterSelectedUrl.getTextValue();
-                if (StringUtils.isNotBlank(textValue)) {
-                    patientDashboard = EDTriageUtil.parseUrl(textValue, "dashboardUrl");
-                }
-            }
-            Iterator<JsonNode> elements = afterSelectedUrl.getElements();
-        }
-        model.addAttribute("dashboardUrl", patientDashboard);
-        
-        */
 
         return null;
 

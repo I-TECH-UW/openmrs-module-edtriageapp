@@ -4,7 +4,7 @@ angular.module("edTriageDataService", [])
             var serverTimeDelta = (new Date().getTime()) - serverDateTimeInMillis;
             var CONSTANTS = {
                 URLS: {
-                    FIND_PATIENT: "coreapps/findpatient/findPatient.page?app=edtriageapp.app.edTriage",
+                    FIND_PATIENT: "coreapps/findpatient/findPatient.page?app=coreapps.findPatient",
                     CONCEPTS: "/" + OPENMRS_CONTEXT_PATH + "/ws/rest/v1/concept",
                     ED_TRIAGE_FOR_ACTIVE_VISIT: "/" + OPENMRS_CONTEXT_PATH + "/ws/rest/v1/encounter?s=getEDTriageEncounterForActiveVisit&v=custom:(uuid,encounterDatetime,encounterProviders:(dateCreated,provider),patient,obs)&patient=PATIENT_UUID&location=LOCATION_UUID",
                     ENCOUNTER: "/" + OPENMRS_CONTEXT_PATH + "/ws/rest/v1/encounter/ENCOUNTER_UUID?v=custom:(uuid,encounterDatetime,encounterProviders:(dateCreated,provider),patient,obs)",

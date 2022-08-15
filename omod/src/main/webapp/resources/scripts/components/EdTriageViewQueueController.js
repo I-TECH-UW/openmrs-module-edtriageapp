@@ -85,7 +85,7 @@ angular.module("edTriageViewQueueController", [])
                             $scope.message = {type: 'danger', text: $filter('json')(res.data)};
                         }
                         else{
-                            var url = $scope.patientDashboard.replace("{{patientId}}", edTriagePatient.patient.uuid);
+                            var url = $scope.patientDashboard.replace("{{patient.patientId}}", edTriagePatient.patient.uuid);
                             emr.navigateTo({ applicationUrl: url});
                         }
                     });

@@ -530,6 +530,7 @@ ${ ui.includeFragment("edtriageapp", "translations") }
 
 <script type="text/javascript">
 	angular.module('edTriageApp')
+	        .value('patientDashboard', '${ dashboardUrl }')
 			.value('patientUuid', '${ patient.uuid }')
 			.value('patientBirthDate', '${ patient.birthdate }')
 			.value('patientGender', '${ patient.gender }')
