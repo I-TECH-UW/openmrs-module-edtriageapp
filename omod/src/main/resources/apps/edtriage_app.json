@@ -7,7 +7,7 @@
         "requiredPrivilege" : null ,
         "icon" : "fas fa-fw fa-list-ol",
         "config": {
-            "dashboardUrl": "coreapps/clinicianfacing/patient.page?patientId={{patient.patientId}}"
+            "dashboardUrl": "spa/patient/{{patient.patientId}}/chart/vitalsAndBiometrics"
         },
         "extensions": [
             {

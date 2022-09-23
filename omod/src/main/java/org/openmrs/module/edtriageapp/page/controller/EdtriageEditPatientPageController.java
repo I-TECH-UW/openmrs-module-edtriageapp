@@ -46,7 +46,7 @@ public class EdtriageEditPatientPageController {
 
         model.addAttribute("encounter", encounter);
         model.addAttribute("editable", editable != null ? editable : true);
-        model.addAttribute("dashboardUrl", "coreapps/clinicianfacing/patient.page?patientId={{patient.patientId}}");
+        model.addAttribute("dashboardUrl", "spa/patient/{{patient.patientId}}/chart/vitalsAndBiometrics");
         
 
         return null;
