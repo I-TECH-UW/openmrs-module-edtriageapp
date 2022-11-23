@@ -7,7 +7,7 @@
         "requiredPrivilege" : null ,
         "icon" : "fas fa-fw fa-list-ol",
         "config": {
-            "dashboardUrl": "spa/patient/{{patient.patientId}}/chart/vitalsAndBiometrics"
+            "dashboardUrl": "spa/patient/{{patient.patientId}}/chart/ED%20SECTION"
         },
         "extensions": [
             {
